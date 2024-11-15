@@ -2,8 +2,9 @@
 
 
 #include "SnakeGameMode.h"
-
+/*
 int ASnakeGameMode::ScoreGetter()
 {
 	return Score;
 }
+*/

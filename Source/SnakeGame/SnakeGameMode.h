@@ -8,7 +8,7 @@
 
 /**
  * 
- */
+
 UCLASS()
 class SNAKEGAME_API ASnakeGameMode : public AGameModeBase
 {
@@ -20,3 +20,4 @@ public:
 
 	int ScoreGetter();
 };
+*/

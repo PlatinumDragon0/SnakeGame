@@ -31,7 +31,7 @@ void ASnakeHUD::BeginPlay()
 	Super::BeginPlay();
 	UUserWidget* SnakeWidget = CreateWidget(GetWorld(), MainHUD);
 	SnakeWidget->AddToViewport();
-	ShowScore = SnakeGameMode -> ScoreGetter();
+	//ShowScore = SnakeGameMode -> ScoreGetter();
 }
 
 void ASnakeHUD::Tick(float DeltaTime)
