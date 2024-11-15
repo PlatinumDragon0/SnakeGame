@@ -34,12 +34,16 @@ public:
 
 	UPROPERTY(EditDefaultsOnly)
 	float MovementSpeed;
+
+	UPROPERTY(EditDefaultsOnly)
+	int Length;
 	
 	UPROPERTY()
 	TArray<ASnakeElementBase*> SnakeElements;
 
 	UPROPERTY()
 	EMovementDirection LastMoveDirection;
+	EMovementDirection MoveBank;
 
 protected:
 	// Called when the game starts or when spawned
@@ -48,8 +52,12 @@ protected:
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
-
+	UFUNCTION(BlueprintCallable)
 	void AddSnakeElement(int ElementsNum = 1);
-
+	UFUNCTION(BlueprintCallable)
 	void Move();
+	UFUNCTION(BlueprintCallable)
+	void SnakeElementOverlap(ASnakeElementBase* OverlappedElement, AActor* Other);
+	UFUNCTION(BlueprintCallable)
+	int LengthGetter();
 };
